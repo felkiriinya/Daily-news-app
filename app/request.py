@@ -1,11 +1,11 @@
 from app import app
 import urllib.request,json
 from .models import source
-from .models import articles
+from .models import article
 
 Source = source.Source
 
-Articles = articles.Articles
+Articles = article.Articles
 
 
 # Getting api key

@@ -19,12 +19,12 @@ def index():
     return render_template('index.html', title = title, technology = tech_sources, business = business_sources, sports = sports_sources)
 
 @app.route('/source/<id>')
-def article(id):
+def articles(id):
     '''
     view articles function that returns a list of articles on the articles
     '''
 
-    article = get_article(id)
-    title = f'Heading {id}'    
+    articles = get_article(id)
+    title = f'Headline {id}'    
 
-    return render_template('article.html',title = title, article = article)
+    return render_template('article.html',title = title, articles = articles)

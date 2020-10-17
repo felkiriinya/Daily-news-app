@@ -2,28 +2,28 @@
 {% block content%}
 <div class="container">
 
-  <h3>News Headlines</h3>
-  
- {% for article_row in articles_list | batch(4)%}
+  <h3 class="text-center" style="font-family: 'Times New Roman', Times, serif; font-size: 30px;">Top Story Headlines</h3>
+  <hr>
+  {% for article_row in articles | batch(4)%}
 
- <div class="row">
+  <div class="row">
 
     {% for article in article_row %}
 
     <div class="col-md-3">
-      <div class="thumbnail">
-        <a href="{{articles.url}}" target="_blank">
-          <img src="{{articles.image}}" alt="{{articles.title}}" class="img-responsive" styles="height:30px">
+      <div class="thumbnail" >
+        <a href="{{article.url}}" target="_blank">
+          <img src="{{article.image}}" alt="{{article.title}}" class="img-responsive" styles="height:30px">
         </a>
 
-        <div class="caption">
-          <h4><a href="{{articles.url}}" target="_blank">{{articles.title |truncate(35)}}</a></h4>
-          <p>{{articles.description | truncate(80)}}</p>
-          <a href="{{articles.url}}" target="_blank"> Read More</a>
+        <div class="caption" style="color: white;background-color: teal;" >
+          <h4><a href="{{article.url}}" target="_blank" style="color: white; font-family: 'Times New Roman', Times, serif; text-transform: uppercase;">{{article.title |truncate(45)}}</a></h4>
+          <p>{{article.description | truncate(80)}}</p>
+          <a href="{{article.url}}" target="_blank" style="color: white;"> Read More</a>
         </div>
 
-        <div class="footer">
-          Published at: {{articles.date}}
+        <div class="footer" >
+          Published at: {{article.date}}
         </div>
 
       </div>
@@ -36,6 +36,5 @@
 
   {% endfor %}
 
-
-</div>
-{%endblock%}
+</div>  
+{% endblock%}

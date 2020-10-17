@@ -1,9 +1,9 @@
 {% macro displaySourcesList(sources_list) %}
-    {% for source_row in sources_list | batch(4)%}
+    {% for source_row in sources_list | batch(3)%}
 
     <div class="row">
     {% for source in source_row %}
-    <div class="col-md-3">
+    <div class="col-md-4">
 
        
         <div class="panel panel-default" >
@@ -12,12 +12,12 @@
                 {{ source.name}}
               </a>
             </div>
-            <div class="panel-body" style="background-color:#C4C4C4;">
+            <div class="panel-body" style="background-color:#faf5f5;">
               <p>
-                {{ source.description |truncate(100)}}
+                {{ source.description |truncate(200)}}
       
               </p>
-              <a href="/source/{{source.id}}" class="btn btn-info btn-sm">View Article</a>
+              <a href="/source/{{source.id}}" class="btn btn-info btn-sm" style="background-color: teal !important;">View Article</a>
             </div>
       
       
