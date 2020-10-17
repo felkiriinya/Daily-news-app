@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     {% if title %}
     <title>{{ title }}</title>
-    {% else }
+    {% else %}
     
     <title>The Daily News</title>
-    {% endif }
+    {% endif %}
 </head>
 <body>
+    <!-- Technology news section -->
+    <h3>Technology news</h3>
+    <ul>
+        {% for tech_source in technology %}
+            <li>{{ tech_source.name}}</li>
+        {% endfor %}
+    </ul>
+    <h3>Business news</h3>
+    <ul>
+        {% for business_source in business %}
+            <li>{{ business_source.name}}</li>
+        {% endfor %}
+    </ul>
+    <h3>Sports news</h3>
+    <ul>
+        {% for sports_source in sports %}
+            <li>{{ sports_source.name}}</li>
+        {% endfor %}
+    </ul>
+    
     
 </body>
 </html>

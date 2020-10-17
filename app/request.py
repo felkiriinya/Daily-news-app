@@ -24,13 +24,13 @@ def get_sources(category):
 
         source_results = None
 
-        if get_sources_response['results']:
-            sources_results_list =  get_sources_response['results']
-            source_results = process_results(sources_results_list)
+        if get_sources_response['sources']:
+            sources_results_list =  get_sources_response['sources']
+            source_results = process_sources(sources_results_list)
 
     return source_results    
 
-def process_results(sources_list):
+def process_sources(sources_list):
     '''
     Function that processes the news sources results and turns them into a list of objects
     Args:
