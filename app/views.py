@@ -19,7 +19,7 @@ def index():
     return render_template('index.html', title = title, technology = tech_sources, business = business_sources, sports = sports_sources)
 
 app.route('/article/<int:id>')
-def article(id)
+def article(id):
     '''
     view articles function that returns a list of articles
     '''
