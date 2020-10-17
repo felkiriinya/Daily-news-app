@@ -78,9 +78,20 @@ def get_article(id):
            articles_results = process_articles(articles_results_list) 
 
     return articles_results       
+    # get_articles_url = articles_url.format(id, api_key)
+
+    # with urllib.request.urlopen(get_articles_url) as url:
+    #     articles_results = json.loads(url.read())
+
+    #     articles_object = None
+    #     if articles_results['articles']:
+    #         articles_object = process_articles(articles_results['articles'])
+
+    # return articles_object
+
 
 def process_articles(articles_list):
-    articles_object = []
+    articles_results = []
     for article_item in articles_list:
         id = article_item.get('id')
         author = article_item.get('author')
@@ -93,6 +104,6 @@ def process_articles(articles_list):
         if image:
             articles_result = Articles(
                     id, author, title, description, url, image, date)
-            articles_object.append(articles_result)
+            articles_results.append(articles_result)
 
-    return articles_object
+    return articles_results
