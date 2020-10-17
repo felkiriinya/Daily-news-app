@@ -2,10 +2,13 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    # https://newsapi.org/v2/sources?apiKey=f1ffdc1e372b4ca09f0a7c5abe5a0194
+    # https://newsapi.org/v2/top-headlines?country=us&apiKey=f1ffdc1e372b4ca09f0a7c5abe5a0194
+    # https://newsapi.org/v2/everything?q=bitcoin&apiKey=f1ffdc1e372b4ca09f0a7c5abe5a0194
 
-
-
+    NEWS_SOURCES_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+    ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
+    
 class ProdConfig(Config):
     '''
     Production  configuration child class
