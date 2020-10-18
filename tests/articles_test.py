@@ -1,7 +1,7 @@
 import unittest
-from models import article
+from app.models import Articles
 
-Articles = article.Articles
+
 class ArticlesTest(unittest.TestCase):
     '''
     Test Class to test the behaviour of the Movie class
@@ -25,5 +25,5 @@ class ArticlesTest(unittest.TestCase):
         self.assertEqual(self.new_article.image,'techie.com/7643t94.jpg')
         self.assertEqual(self.new_article.date,'2018-04-11T07:57:16Z')
 
-if __name__ == '__main__':
-    unittest.main()        
+# if __name__ == '__main__':
+#     unittest.main()        
