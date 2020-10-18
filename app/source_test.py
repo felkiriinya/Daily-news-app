@@ -18,13 +18,13 @@ class SourceTest(unittest.TestCase):
         self.assertTrue(isinstance(self.new_source,Source))
 
     def test_to_check_instance_variables(self):
-        self.assertEquals(self.new_source.id,'Bloomberg')
-        self.assertEquals(self.new_source.name,'Bloomberg News')
-        self.assertEquals(self.new_source.description,'Bloomberg delivers business and markets news, data, analysis, and video to the world, featuring')
-        self.assertEquals(self.new_source.url,'bloomberg.com')
-        self.assertEquals(self.new_source.category,'general')
-        self.assertEquals(self.new_source.country,'U.S.A')
-        self.assertEquals(self.new_source.language,'en')
+        self.assertEqual(self.new_source.id,'Bloomberg')
+        self.assertEqual(self.new_source.name,'Bloomberg News')
+        self.assertEqual(self.new_source.description,'Bloomberg delivers business and markets news, data, analysis, and video to the world, featuring')
+        self.assertEqual(self.new_source.url,'bloomberg.com')
+        self.assertEqual(self.new_source.category,'general')
+        self.assertEqual(self.new_source.country,'U.S.A')
+        self.assertEqual(self.new_source.language,'en')
 
 if __name__ == '__main__':
     unittest.main()
