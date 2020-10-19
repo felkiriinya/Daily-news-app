@@ -1,27 +1,40 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro%}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block styles %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="container">
 
-{% block content %}
-<div class="container">
-
-    <h2 class="text-center" style="font-family: 'Times New Roman', Times, serif;"> TOP NEWS SOURCES AND ARTICLES FROM ALL AROUND THE WORLD</h2>
-     <hr>
-    <h3 class="text-center" style="font-family: 'Times New Roman', Times, serif;" >Technology News Sources</h3>
-    <hr>
-    <ul>
-        {{ macro.displaySourcesList(technology)}}
-    </ul>
-    <h3 class="text-center"style="font-family: 'Times New Roman', Times, serif;"> Business News Sources</h3>
-    <hr>
-    <ul>
-        {{ macro.displaySourcesList(business)}}
-    </ul>
-    <h3 class="text-center"style="font-family: 'Times New Roman', Times, serif;">Sports News Sources</h3>
-    <hr>
-    <ul>
-        {{ macro.displaySourcesList(sports)}}
-    </ul>
-</div>    
+        <h2 class="text-center" style="font-family: 'Times New Roman', Times, serif;"> TOP NEWS SOURCES AND ARTICLES FROM ALL AROUND THE WORLD</h2>
+        <hr>
+        <h3 class="text-center" style="font-family: 'Times New Roman', Times, serif;" >Technology News Sources</h3>
+        <hr>
+        <ul>
+            {{ macro.displaySourcesList(technology)}}
+        </ul>
+        <h3 class="text-center"style="font-family: 'Times New Roman', Times, serif;"> Business News Sources</h3>
+        <hr>
+        <ul>
+            {{ macro.displaySourcesList(business)}}
+        </ul>
+        <h3 class="text-center"style="font-family: 'Times New Roman', Times, serif;">Sports News Sources</h3>
+        <hr>
+        <ul>
+            {{ macro.displaySourcesList(sports)}}
+        </ul>
+    </div>    
 
 {% endblock %}
+    
+</body>
+</html>
+
+

@@ -18,6 +18,7 @@ def index():
     
     print(tech_sources)
     title = 'The Daily News'
+    
     return render_template('index.html', title = title, technology = tech_sources, business = business_sources, sports = sports_sources)
 
 @main.route('/source/<id>')
