@@ -1,6 +1,6 @@
 # Daily-news-app
 A daily news application done using flask, allows you to display latest news sources and also allows you to read the articles by the source, powered by NEWS API. 19/10/2020
-By Felista Kiriinya
+### By Felista Kiriinya
 
 ## Description
 
@@ -39,7 +39,7 @@ Technologies used to develop this application:
 ## Support and contact details
 If you have any recommendations or questions feel free to email me:[felkiriinya@gmail.com](mailto:felkiriinya@gmail.com)
 
-## [License]()
+## [License](https://github.com/felkiriinya/Daily-news-app/blob/master/LICENSE)
 
 Copyright (c) 2020 [Felista Kiriinya](https://github.com/felkiriinya)
 
